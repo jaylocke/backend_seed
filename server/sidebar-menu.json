@@ -1,0 +1,49 @@
+[
+  {
+    "text": "Menu Heading",
+    "heading": "true",
+    "translate": "sidebar.heading.HEADER"
+  },
+  {
+    "text": "Single View",
+    "sref": "app.singleview",
+    "icon": "fa fa-file-o",
+    "translate": "sidebar.nav.SINGLEVIEW"
+  },
+  {
+    "text": "Menu",
+    "sref": "#",
+    "icon": "icon-folder",
+    "submenu": [
+      { "text": "Sub Menu", 
+        "sref": "app.submenu", 
+        "translate": "sidebar.nav.menu.SUBMENU" 
+      }    
+    ],
+    "translate": "sidebar.nav.menu.MENU"
+  },
+  {
+    "text": "Elements",
+    "sref": "#",
+    "icon": "icon-chemistry",
+    "submenu": [
+      {"text": "Buttons",
+        "sref": "app.buttons",
+        "translate": "sidebar.nav.element.BUTTON"
+      }
+    ],
+    "translate": "sidebar.nav.element.ELEMENTS"
+  },
+  {
+    "text": "Tables",
+    "sref": "#",
+    "icon": "icon-grid",
+    "submenu": [
+      { "text": "xEditable",
+        "sref": "app.table-xeditable"
+      }
+
+    ],
+    "translate": "sidebar.nav.table.TABLE"
+  }
+]
