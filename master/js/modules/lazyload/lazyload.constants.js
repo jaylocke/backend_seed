@@ -14,7 +14,10 @@
           modules: [
             // {name: 'toaster', files: ['vendor/angularjs-toaster/toaster.js', 'vendor/angularjs-toaster/toaster.css']}
               {name: 'xeditable',                 files: ['vendor/angular-xeditable/dist/js/xeditable.js',
-                                                          'vendor/angular-xeditable/dist/css/xeditable.css']}
+                                                          'vendor/angular-xeditable/dist/css/xeditable.css']},
+              {name: 'datatables',                files: ['vendor/datatables/media/css/jquery.dataTables.css',
+                                                          'vendor/datatables/media/js/jquery.dataTables.js',
+                                                          'vendor/angular-datatables/dist/angular-datatables.js'], serie: true},
           ]
         })
         ;

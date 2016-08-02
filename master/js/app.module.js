@@ -27,10 +27,10 @@
             'app.settings',
             //'app.notify',
             'app.bootstrapui',
-            'app.elements',
-            'app.panels',
-            'app.forms',
-            'app.tables',
+            //'app.elements',
+            //'app.panels',
+            //'app.forms',
+           // 'app.tables',
             'app.utils'
         ]);
 })();

@@ -1,0 +1,116 @@
+<h3>Data Tables
+   <small>Tables, one step forward.</small>
+</h3>
+<!--// Zero Configuration-->
+<!--.panel.panel-default-->
+<!--  .panel-heading Data Tables |-->
+<!--    small Zero Configuration-->
+<!--  .panel-body-->
+<!--    table.row-border.hover(datatable='')-->
+<!--      thead-->
+<!--        tr-->
+<!--          th Card Id-->
+<!--          th First name-->
+<!--          th Last name-->
+<!--          th Age-->
+<!--      tbody-->
+<!--        tr-->
+<!--          td 123123123-->
+<!--          td Hannah-->
+<!--          td Burns-->
+<!--          td 26-->
+<!--        tr-->
+<!--          td 33333344444-->
+<!--          td Addison-->
+<!--          td Payne-->
+<!--          td 32-->
+<!--        tr-->
+<!--          td 9998888999-->
+<!--          td Kylie-->
+<!--          td Hudson-->
+<!--          td 100-->
+<!-- ngRepeat + ngResource-->
+<!--.panel.panel-default-->
+<!--  .panel-heading Datatables |-->
+<!--    small ngRepeat + ngResource-->
+<!--  .panel-body-->
+<!--    div(ng-controller='DataTableController as table1')-->
+<!--      table.row-border.hover(datatable='ng', dt-options='table1.dtOptions')-->
+<!--        thead-->
+<!--          tr-->
+<!--            th Person ID-->
+<!--            th First Name-->
+<!--            th Last Name-->
+<!--        tbody-->
+<!--          tr(ng-repeat='person in table1.persons')-->
+<!--            td {{ person.id }}-->
+<!--            td {{ person.firstName }}-->
+<!--            td {{ person.lastName }}-->
+<!-- Chaning data-->
+<div class="panel panel-default">
+   <div class="panel-heading">Datatables |
+      <small>Chaning data</small>
+   </div>
+   <div class="panel-body">
+      <div ng-controller="DataTableController as table2">
+         <form ng-submit="table2.addPerson()" class="form-inline">
+            <table datatable="ng" dt-options="table2.dtOptions" dt-column-defs="table2.dtColumnDefs" class="row-border hover">
+               <thead>
+                  <tr>
+                     <th>
+                        <div class="form-group">
+                           <label>
+                              <input type="number" name="id" ng-model="table2.person2Add.id" value="" class="form-control" />
+                           </label>
+                        </div>
+                     </th>
+                     <th>
+                        <div class="form-group">
+                           <label>
+                              <input type="text" name="firstName" ng-model="table2.person2Add.firstName" value="" class="form-control" />
+                           </label>
+                        </div>
+                     </th>
+                     <th>
+                        <div class="form-group">
+                           <label>
+                              <input type="text" name="lastName" ng-model="table2.person2Add.lastName" value="" class="form-control" />
+                           </label>
+                        </div>
+                     </th>
+                     <th>
+                        <div class="form-group">
+                           <button type="submit" class="btn btn-labeled btn-success">
+                              <span class="btn-label">
+                                 <em class="fa fa-plus"></em>
+                              </span>Add</button>
+                        </div>
+                     </th>
+                  </tr>
+                  <tr>
+                     <th>ID</th>
+                     <th>字段1</th>
+                     <th>字段2</th>
+                     <th>操作</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="hero in table2.heroes">
+                     <td>{{ hero.id }}</td>
+                     <td>{{ hero.firstName }}</td>
+                     <td>{{ hero.lastName }}</td>
+                     <td>
+                        <button type="button" ng-click="table2.modifyPerson($index)" class="btn btn-sm btn-warning">
+                           <em class="fa fa-edit"></em>
+                        </button>
+                        <button type="button" ng-click="table2.removePerson($index)" class="btn btn-sm btn-danger">
+                           <em class="fa fa-trash-o"></em>
+                        </button>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </form>
+      </div>
+   </div>
+</div>

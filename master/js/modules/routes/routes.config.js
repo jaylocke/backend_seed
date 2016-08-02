@@ -52,6 +52,12 @@
                 templateUrl: helper.basepath('table-xeditable.html'),
                 resolve: helper.resolveFor('xeditable')
             })
+            .state('app.table-datatable', {
+                url: '/table-datatable',
+                title: 'Table Datatable',
+                templateUrl: helper.basepath('table-datatable.html'),
+                resolve: helper.resolveFor('datatables')
+            })
           // 
           // CUSTOM RESOLVES
           //   Add your own resolves properties

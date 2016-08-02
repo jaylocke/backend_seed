@@ -4,10 +4,9 @@
     angular
         .module('custom', [
             // request the the entire framework
-            'seed'
+            'seed',
             // or just modules
-            /*'app.core',
-            'app.sidebar'*/
-            /*...*/
+            /*'app.core' */
+            'app.tables'
         ]);
 })();

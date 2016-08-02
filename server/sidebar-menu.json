@@ -39,8 +39,9 @@
     "sref": "#",
     "icon": "icon-grid",
     "submenu": [
-      { "text": "xEditable",
-        "sref": "app.table-xeditable"
+       {
+        "text": "DataTables",
+        "sref": "app.table-datatable"
       }
 
     ],
