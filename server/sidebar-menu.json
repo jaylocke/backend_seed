@@ -23,18 +23,6 @@
     "translate": "sidebar.nav.menu.MENU"
   },
   {
-    "text": "Elements",
-    "sref": "#",
-    "icon": "icon-chemistry",
-    "submenu": [
-      {"text": "Buttons",
-        "sref": "app.buttons",
-        "translate": "sidebar.nav.element.BUTTON"
-      }
-    ],
-    "translate": "sidebar.nav.element.ELEMENTS"
-  },
-  {
     "text": "Tables",
     "sref": "#",
     "icon": "icon-grid",
@@ -44,7 +32,6 @@
         "sref": "app.table-datatable"
       }
 
-    ],
-    "translate": "sidebar.nav.table.TABLE"
+    ]
   }
 ]

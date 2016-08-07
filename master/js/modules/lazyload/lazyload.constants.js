@@ -18,6 +18,9 @@
               {name: 'datatables',                files: ['vendor/datatables/media/css/jquery.dataTables.css',
                                                           'vendor/datatables/media/js/jquery.dataTables.js',
                                                           'vendor/angular-datatables/dist/angular-datatables.js'], serie: true},
+              {name: 'ngDialog',                  files: ['vendor/ngDialog/js/ngDialog.min.js',
+                                                            'vendor/ngDialog/css/ngDialog.min.css',
+                                                            'vendor/ngDialog/css/ngDialog-theme-default.min.css'] },
           ]
         })
         ;

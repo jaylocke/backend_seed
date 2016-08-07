@@ -1,0 +1,62 @@
+// START row
+.row
+    .panel.panel-default
+        .panel-heading
+            | Hover Rows
+        .panel-body
+            .table-responsive(ng-controller="ServerSideController as users")
+                table.table.table-hover
+                    thead
+                        tr
+                            th date
+                            th feeAmount
+                            th requestCount
+                            th payAmount
+                            th payCount
+                            th 操作
+                    tbody(ng-repeat="user in users.data")
+                        tr
+                            td {{ ::user.date }}
+                            td {{ ::user.feeAmount }}
+                            td {{ ::user.requestCount }}
+                            td {{ ::user.payAmount }}
+                            td {{ ::user.payCount }}
+                            td
+                                button.btn.btn-sm.btn-warning(type='button', ng-click='users.modifyPerson($index)')
+                                    em.fa.fa-edit
+                                button.btn.btn-sm.btn-danger(type='button', ng-click='users.removePerson($index)')
+                                    em.fa.fa-trash-o
+                .col-md-6.col-md-offset-6
+                    pagination.pagination-sm(total-items='users.totalItems', ng-model='users.currentPage', max-size='users.maxSize', boundary-links='true', rotate='false', num-pages='users.numPages', ng-change='users.pageChanged()')
+                    pre Page: {{users.currentPage}} / {{users.numPages}}
+
+// END row
+
+<!-- Templates -->
+
+script(type="text/ng-template", id="modalDialogId")
+    .ngdialog-message
+        h3 修改用户信息
+        div
+            .form-group
+                label
+                    input.form-control(type='data', name='id', ng-model='ngDialogData.data', value='')
+        div
+            .form-group
+                label
+                    input.form-control(type='text', name='feeAmount', ng-model='ngDialogData.feeAmount', value='')
+        div
+            .form-group
+                label
+                    input.form-control(type='text', name='requestCount', ng-model='ngDialogData.requestCount', value='')
+        div
+            .form-group
+                label
+                    input.form-control(type='text', name='payAmount', ng-model='ngDialogData.payAmount', value='')
+        div
+            .form-group
+                label
+                    input.form-control(type='text', name='payCount', ng-model='ngDialogData.payCount', value='')
+
+        button.btn.btn-primary.mr(type='button', ng-click='save(ngDialogData)') 保存
+        button.btn.btn-default(type='button', ng-click="closeThisDialog(0)") 取消

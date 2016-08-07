@@ -55,8 +55,8 @@
             .state('app.table-datatable', {
                 url: '/table-datatable',
                 title: 'Table Datatable',
-                templateUrl: helper.basepath('table-datatable.html'),
-                resolve: helper.resolveFor('datatables')
+                templateUrl: helper.basepath('table-list.html'),
+                resolve: helper.resolveFor('ngDialog')
             })
           // 
           // CUSTOM RESOLVES

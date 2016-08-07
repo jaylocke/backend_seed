@@ -7,6 +7,6 @@
             'seed',
             // or just modules
             /*'app.core' */
-            'app.tables'
+            'app.userlist'
         ]);
 })();
