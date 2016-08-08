@@ -27,7 +27,7 @@
             'app.settings',
             //'app.notify',
             'app.bootstrapui',
-            //'app.elements',
+            'app.md5',
             //'app.panels',
             //'app.forms',
            // 'app.tables',

@@ -29,7 +29,11 @@
         hiddenFooter: false,
         offsidebarOpen: false,
         asideToggled: false,
-        viewAnimation: 'ng-fadeInUp'
+        viewAnimation: 'ng-fadeInUp',
+        logoImg: {
+            logo: 'app/img/logo.png',
+            logoSingle: 'app/img/logo-single.png'
+        }
       };
 
       // Setup the layout mode

@@ -4,9 +4,10 @@ nav.navbar.topnavbar(role='navigation')
     .navbar-header
       a.navbar-brand(href='#/') 
         .brand-logo 
-          img.img-responsive(src="app/img/logo.png", alt="App Logo")
+          img.img-responsive(src="{{app.logoImg.logo}}", alt="App Logo")
+          span{{app.logoImg.logo}}
         .brand-logo-collapsed 
-          img.img-responsive(src="app/img/logo-single.png", alt="App Logo")
+          img.img-responsive(src="{{app.logoImg.logoSingle}}", alt="App Logo")
     // END navbar header
 
     // START Nav wrapper

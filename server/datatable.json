@@ -17,7 +17,9 @@
       "id": "f87a36c57095439c928c3b19f1ab93e2",
       "requestAmount": 7264614104.82,
       "chequeDateAmount": 7264354930.92,
-      "chequeDateCount": 22
+      "chequeDateCount": 22,
+      "btnModify": true ,
+      "btnDel": true
     },
     {
       "date": "2016.08.03",
@@ -25,21 +27,27 @@
       "payCount": 0,
       "id": "6d56e0d7e0fc4ed68dcad80bcd1a4936",
       "requestAmount": 727050334.32,
-      "chequeDateCount": 0
+      "chequeDateCount": 0,
+      "btnModify": false ,
+      "btnDel": true
     },
     {
       "date": "2016.08.02",
       "requestCount": 0,
       "payCount": 0,
       "id": "acd6d424a6bb44238232353d3e05d1fd",
-      "chequeDateCount": 0
+      "chequeDateCount": 0,
+      "btnModify": false ,
+      "btnDel": false
     },
     {
       "date": "2016.07.31",
       "requestCount": 0,
       "payCount": 0,
       "id": "f81258251ac04ea2972dc929fb3e4c07",
-      "chequeDateCount": 0
+      "chequeDateCount": 0,
+      "btnModify": true ,
+      "btnDel": false
     },
     {
       "date": "2016.07.28",
@@ -50,21 +58,27 @@
       "id": "91c582d2e4b340bf83285fd770cb2517",
       "requestAmount": 1808703.00,
       "chequeDateAmount": 900885.00,
-      "chequeDateCount": 18
+      "chequeDateCount": 18,
+      "btnModify": true ,
+      "btnDel": true
     },
     {
       "date": "2016.07.27",
       "requestCount": 0,
       "payCount": 0,
       "id": "2980f444f70540d7bc1440662728937a",
-      "chequeDateCount": 0
+      "chequeDateCount": 0,
+      "btnModify": false ,
+      "btnDel": true
     },
     {
       "date": "2016.07.26",
       "requestCount": 0,
       "payCount": 0,
       "id": "173e35dcbb384ca39be898f9d5ad56ef",
-      "chequeDateCount": 0
+      "chequeDateCount": 0,
+      "btnModify": true ,
+      "btnDel": true
     },
     {
       "date": "2016.07.25",
@@ -75,14 +89,18 @@
       "id": "3db52edac64e40c7afa471e7eadef894",
       "requestAmount": 250000.00,
       "chequeDateAmount": 250000.00,
-      "chequeDateCount": 5
+      "chequeDateCount": 5,
+      "btnModify": false ,
+      "btnDel": false
     },
     {
       "date": "2016.07.24",
       "requestCount": 0,
       "payCount": 0,
       "id": "88745de74edb4bf8a42587eebc74c0fa",
-      "chequeDateCount": 0
+      "chequeDateCount": 0,
+      "btnModify": true ,
+      "btnDel": false
     }
   ],
   "firstPage": true,

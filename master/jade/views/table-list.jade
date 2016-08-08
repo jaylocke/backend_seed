@@ -5,6 +5,11 @@
             | Hover Rows
         .panel-body
             .table-responsive(ng-controller="ServerSideController as users")
+                div
+                    button.btn.btn-labeled.btn-success(type='button', ng-click='users.addPerson()')
+                        span.btn-label
+                            em.fa.fa-plus
+                        | Add
                 table.table.table-hover
                     thead
                         tr
@@ -16,47 +21,74 @@
                             th 操作
                     tbody(ng-repeat="user in users.data")
                         tr
-                            td {{ ::user.date }}
-                            td {{ ::user.feeAmount }}
-                            td {{ ::user.requestCount }}
-                            td {{ ::user.payAmount }}
-                            td {{ ::user.payCount }}
+                            td {{ user.date }}
+                            td {{ user.feeAmount }}
+                            td {{ user.requestCount }}
+                            td {{ user.payAmount }}
+                            td {{ user.payCount }}
                             td
-                                button.btn.btn-sm.btn-warning(type='button', ng-click='users.modifyPerson($index)')
+                                button.btn.btn-sm.btn-warning(type='button', ng-if='user.btnModify', ng-click='users.modifyPerson($index)')
                                     em.fa.fa-edit
-                                button.btn.btn-sm.btn-danger(type='button', ng-click='users.removePerson($index)')
+                                button.btn.btn-sm.btn-danger(type='button', ng-if='user.btnDel', ng-click='users.removePerson($index)')
                                     em.fa.fa-trash-o
-                .col-md-6.col-md-offset-6
+                .col-md-5.col-md-offset-5
                     pagination.pagination-sm(total-items='users.totalItems', ng-model='users.currentPage', max-size='users.maxSize', boundary-links='true', rotate='false', num-pages='users.numPages', ng-change='users.pageChanged()')
-                    pre Page: {{users.currentPage}} / {{users.numPages}}
+                .col-md-2
+                    select.form-control.selectNum(ng-change='users.select()' ng-model='users.currentNum' ng-options='selectNum for selectNum in users.selectNumTotal')
 
 // END row
 
 <!-- Templates -->
 
-script(type="text/ng-template", id="modalDialogId")
+script(type="text/ng-template", id="modifyPersonId")
     .ngdialog-message
         h3 修改用户信息
         div
             .form-group
                 label
-                    input.form-control(type='data', name='id', ng-model='ngDialogData.data', value='')
+                    input.form-control(type='text', name='id', ng-model='dialogData.date' value='')
         div
             .form-group
                 label
-                    input.form-control(type='text', name='feeAmount', ng-model='ngDialogData.feeAmount', value='')
+                    input.form-control(type='text', name='feeAmount', ng-model='dialogData.feeAmount'  value='')
         div
             .form-group
                 label
-                    input.form-control(type='text', name='requestCount', ng-model='ngDialogData.requestCount', value='')
+                    input.form-control(type='text', name='requestCount', ng-model='dialogData.requestCount' value='')
         div
             .form-group
                 label
-                    input.form-control(type='text', name='payAmount', ng-model='ngDialogData.payAmount', value='')
+                    input.form-control(type='text', name='payAmount', ng-model='dialogData.payAmount' value='')
         div
             .form-group
                 label
-                    input.form-control(type='text', name='payCount', ng-model='ngDialogData.payCount', value='')
+                    input.form-control(type='text', name='payCount', ng-model='dialogData.payCount' value='')
 
-        button.btn.btn-primary.mr(type='button', ng-click='save(ngDialogData)') 保存
+        button.btn.btn-primary.mr(type='button', ng-click='save()') 保存
+        button.btn.btn-default(type='button', ng-click="closeThisDialog(0)") 取消
+script(type="text/ng-template", id="addPersonId")
+    .ngdialog-message
+        h3 添加用户信息
+        div
+            .form-group
+                label
+                    input.form-control(type='text', name='id', ng-model='dialogData.date', value='', placeholder='请输入date' )
+        div
+            .form-group
+                label
+                    input.form-control(type='text', name='feeAmount', ng-model='dialogData.feeAmount',  value='', placeholder='请输入feeAmount')
+        div
+            .form-group
+                label
+                    input.form-control(type='text', name='requestCount', ng-model='dialogData.requestCount', value='', placeholder='请输入requestCount')
+        div
+            .form-group
+                label
+                    input.form-control(type='text', name='payAmount', ng-model='dialogData.payAmount', value='',placeholder='请输入payAmount')
+        div
+            .form-group
+                label
+                    input.form-control(type='text', name='payCount', ng-model='dialogData.payCount', value='', placeholder='请输入payCount')
+
+        button.btn.btn-primary.mr(type='button', ng-click='add()') 添加
         button.btn.btn-default(type='button', ng-click="closeThisDialog(0)") 取消
