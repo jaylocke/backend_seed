@@ -8,7 +8,9 @@
           scripts: {
             'modernizr':          ['vendor/modernizr/modernizr.js'],
             'icons':              ['vendor/fontawesome/css/font-awesome.min.css',
-                                   'vendor/simple-line-icons/css/simple-line-icons.css']
+                                   'vendor/simple-line-icons/css/simple-line-icons.css'],
+            'loaders.css':          ['vendor/loaders.css/loaders.css'],
+            'spinkit':              ['vendor/spinkit/css/spinkit.css']
           },
           // Angular based script (use the right module name)
           modules: [

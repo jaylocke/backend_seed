@@ -56,7 +56,7 @@
                 url: '/table-datatable',
                 title: 'Table Datatable',
                 templateUrl: helper.basepath('table-list.html'),
-                resolve: helper.resolveFor('ngDialog')
+                resolve: helper.resolveFor('ngDialog','loaders.css', 'spinkit')
             })
           // 
           // CUSTOM RESOLVES
